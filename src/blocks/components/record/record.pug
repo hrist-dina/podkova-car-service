@@ -1,0 +1,23 @@
+section.record
+    .container
+        .record__inner
+            h1.h1.record__h1
+                |Запись на обслуживание автомобиля
+            ul.tab
+                li.tab__item.active
+                    a.tab__link(href="#")
+                        |Выбор автомобиля и услуги
+                li.tab__item
+                    a.tab__link(href="#")
+                        |Станция и время
+                li.tab__item
+                    a.tab__link(href="#")
+                        |Подтверждение
+            .tab-content__list
+                .tab-content__item
+                   include ../filter/filter
+
+
+
+
+

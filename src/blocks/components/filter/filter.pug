@@ -1,0 +1,120 @@
+-
+    var popularMarks = [
+        'Williamson',
+        'Henry',
+        'Wilson',
+        'Simmmons',
+        'Fox',
+        'Howard',
+        'Hawkins',
+        'Alexander'
+
+    ]
+
+-
+    var allMarks = [
+        'Williamson',
+        'Henry',
+        'Wilson',
+        'Simmmons',
+        'Fox',
+        'Howard',
+        'Hawkins',
+        'Alexander',
+        'Cooper'
+    ]
+
+-
+    var popularModels = [
+        'Williamson',
+        'Henry',
+        'Wilson',
+        'Simmmons',
+        'Fox',
+        'Howard',
+        'Hawkins',
+        'Alexander',
+        'Cooper',
+        'Williamson',
+        'Henry',
+        'Wilson',
+        'Simmmons',
+        'Fox',
+        'Howard',
+        'Hawkins',
+        'Alexander',
+        'Cooper'
+    ]
+-
+    var allModels = [
+        'Williamson',
+        'Henry',
+        'Wilson',
+        'Simmmons',
+        'Fox',
+        'Howard',
+        'Hawkins',
+        'Alexander',
+        'Cooper',
+        'Williamson',
+        'Henry',
+        'Wilson',
+        'Simmmons',
+        'Fox',
+        'Howard',
+        'Hawkins',
+        'Alexander',
+        'Cooper'
+    ]
+
+
+.filter.js-filter
+    .filter__select.js-filter-select(data-filter='mark') Марка авто
+    .filter__select.js-filter-select(data-filter='model') Модель авто
+    .filter__services
+        .filter__services-count 15
+        .filter__services-text Масло в двигателе замена, Мас
+        .filter__services-delete
+        .filter__services-price 490 р.
+    a(href='javascript:void(0)').filter__button Записаться
+.filter-content__list.js-filter-content
+    .filter-content__item(data-filter-content='mark')
+        .filter-content__block
+            .filter-content__block-title Популярные марки
+            .filter-content__block-list
+                for item in popularMarks
+                    .filter-content__block-item
+                        label.radio=item
+                            input.radio-input(type="checkbox")
+                            span.radio-mark
+
+
+        .filter-content__block
+            .filter-content__block-title Все марки
+            .filter-content__block-list
+                for item in allMarks
+                    .filter-content__block-item
+                        label.radio=item
+                            input.radio-input(type="checkbox")
+                            span.radio-mark
+
+    .filter-content__item(data-filter-content='model')
+        .filter-content__block
+            .filter-content__block-title Популярные марки
+            .filter-content__block-list
+                for item in popularModels
+                    .filter-content__block-item
+                        label.radio=item
+                            input.radio-input(type="checkbox")
+                            span.radio-mark
+
+
+        .filter-content__block
+            .filter-content__block-title Все марки
+            .filter-content__block-list
+                for item in allModels
+                    .filter-content__block-item
+                        label.radio=item
+                            input.radio-input(type="checkbox")
+                            span.radio-mark
+

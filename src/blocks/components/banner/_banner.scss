@@ -1,0 +1,23 @@
+.banner {
+  margin-top: 24px;
+  &__inner {
+    position: relative;
+    height: 200px;
+    background: #1c98ff;
+    border-radius: 8px;
+  }
+
+  &__title {
+    position: absolute;
+    font-size: 30px;
+    padding: 0 0 24px 24px;
+    line-height: 36px;
+    color: #ffffff;
+    font-weight: bold;
+    margin: auto;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+}

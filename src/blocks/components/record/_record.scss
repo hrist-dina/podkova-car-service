@@ -1,0 +1,78 @@
+.record {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  &__inner {
+    padding-bottom: 49px;
+    border-bottom: 1px solid #E6E6E6;
+  }
+  h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 42px;
+    color: #333333;
+    margin-bottom: 32px;
+  }
+}
+
+.tab {
+  background: linear-gradient(180deg, #414141 0%, #333333 100%);
+  font-size: 0;
+  border-radius: 6px;
+
+  &__item {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    list-style-type: none;
+    padding: 24px;
+    text-align: center;
+    width: 33.33%;
+    box-sizing: border-box;
+
+    &:after {
+      content: '/';
+      position: absolute;
+      font-size: 20px;
+      line-height: 24px;
+      height: 24px;
+      text-align: center;
+      color: #fff;
+      right: -6px;
+      bottom: 0;
+      top: 0;
+      left: auto;
+      margin: auto;
+    }
+
+    &:first-child {
+      border-radius: 4px 0 0 4px;
+    }
+
+    &:last-child {
+      border-radius:  0 4px 4px 0;
+      &:after {
+        content: none;
+      }
+    }
+
+    &.active {
+      background: #fff160;
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  &__item.active &__link {
+    color: #333333;
+  }
+
+  &__link {
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: normal;
+    line-height: 24px;
+  }
+}
