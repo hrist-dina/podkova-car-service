@@ -1,0 +1,117 @@
+section.banner
+    .container
+        .banner__inner
+            .banner__title 
+                |Заголовок баннера
+section.record
+    .container
+        h1.h1.record__h1
+            |Запись на обслуживание автомобиля
+        ul.tab
+            li.tab__item.active
+                a.tab__link(href="#")
+                    |Выбор автомобиля и услуги
+            li.tab__item
+                a.tab__link(href="#")
+                    |Станция и время
+            li.tab__item
+                a.tab__link(href="#")
+                    |Подтверждение
+
+section.services
+    .container
+        .services__title
+            |Услуги автосервиса
+        .services__list
+            .services__item
+                .services__name
+                    img(src="img/car-selection/icon_1.svg", alt="")
+                    .services__info
+                        .services__text
+                            |Диагностика автомобиля
+                        .services__quantity
+                            |15 услуг
+            .services__item
+                .services__name
+                    img(src="img/car-selection/icon_2.svg", alt="")
+                    .services__info
+                        .services__text
+                            |Ремонт
+                        .services__quantity
+                            |15 услуг
+            .services__item
+                .services__name
+                    img(src="img/car-selection/icon_3.svg", alt="")
+                    .services__info
+                        .services__text
+                            |Техническое обслуживание
+                        .services__quantity
+                            |15 услуг
+            .services__item
+                .services__name
+                    img(src="img/car-selection/icon_4.svg", alt="")
+                    .services__info
+                        .services__text
+                            |Шиномонтаж
+
+                        .services__quantity
+                            |15 услуг
+
+
+
+section.selected
+    .container
+        .selected__title
+            |Выбранные услуги
+            .container
+                .selected___list
+                    .selected__item
+                        .selected__text
+                            |Масло в двигателе замена
+                        .selected__price
+                            |490 р.
+                        img(src="img/car-selection/delete.svg", alt="")
+                    .selected__item
+                        .selected__text
+                            |Масло в двигателе замена
+                        .selected__price
+                            |490 р.
+                        img(src="img/car-selection/delete.svg", alt="")
+                    .selected__item
+                        .selected__text
+                            |Масло в двигателе замена
+                        .selected__price
+                            |490 р.
+                        img(src="img/car-selection/delete.svg", alt="")
+                    .selected__item
+                        .selected__text
+                            |Масло в двигателе замена
+                        .selected__price
+                            |490 р.
+                        img(src="img/car-selection/delete.svg", alt="")
+                    .selected__item
+                        .selected__text
+                            |Масло в двигателе замена
+                        .selected__price
+                            |490 р.
+                        img(src="img/car-selection/delete.svg", alt="")
+
+
+section.address
+    .container
+        .address__inner
+            .address__text
+                | Будем ожидать Вас по адресу 
+            .addres__info
+                | ул. Попова 150 в 18:00 28.08.19
+
+section.confirmation
+    .container
+        .confirmation__title
+            | Подтверждение записи
+        .confirmation-form
+            label.confirmation-form__label
+                input.confirmation-form__input(type="text" placeholder="Фамилия и Имя")
+            label.confirmation-form__label
+                input.confirmation-form__input(type="text" placeholder="Номер телефона")
+            button.confirmation__button Подтвердить запись
