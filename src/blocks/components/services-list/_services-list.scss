@@ -1,0 +1,166 @@
+.services-list {
+  margin-top: 32px;
+
+  &__main,
+  &__child {
+    list-style-type: none;
+  }
+
+  &__child {
+    margin-left: 48px;
+    display: none;
+  }
+  &__child &__item {
+    font-weight: normal;
+  }
+
+  &__item {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    color: #333333;
+    & .services-checkbox,
+    &-inner {
+      display: flex;
+      align-items: center;
+      padding-left: 16px;
+      justify-content: space-between;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    &-arrow {
+      position: relative;
+      right: 0;
+      background: url(icon-arrow-down()) no-repeat center;
+      width: 14px;
+      height: 8px;
+      padding: 20px 16px;
+      cursor: pointer;
+      margin-left: auto;
+    }
+
+    &-img {
+      max-width: 24px;
+      max-height: 24px;
+      width: 100%;
+    }
+
+    & .services-checkbox-name,
+    &-name {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-left: 8px;
+      border-bottom: 1px solid #E6E6E6;
+      box-sizing: border-box;
+
+      & > span {
+        padding: 20px 16px 20px 8px;
+        cursor: pointer;
+      }
+    }
+
+    &.active > &-inner > .services-checkbox > .services-checkbox-name {
+      border-color: transparent;
+    }
+
+    &-price {
+      position: relative;
+      &:after {
+        content: attr(data-price);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 16px;
+        left: auto;
+        margin: auto;
+        height: 24px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: right;
+        color: #333333;
+      }
+    }
+  }
+}
+.services-checkbox {
+  & > input {
+    display: none;
+  }
+  & > input:checked ~ &-mark {
+    background: #1C98FF url(icon-checkbox()) no-repeat -1px center;
+    background-size: contain;
+    transition: none;
+    border: 2px solid transparent;
+  }
+
+  &-mark {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: #EAF8FB;
+    border-radius: 2px;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    @include transition(.3s, ease);
+    cursor: pointer;
+  }
+
+  &:hover &-mark {
+    border: 2px solid #1C98FF;
+    background-color: transparent;
+    @include transition(.3s, ease);
+  }
+
+  &:hover &-name {
+    color: #1C98FF;
+    @include transition(.3s, ease);
+  }
+}
+
+.hint {
+  position: relative;
+  background: url(icon-hint()) no-repeat center;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  cursor: help;
+  &-message {
+    position: absolute;
+    bottom: 45px;
+    left: -160px;
+    display: none;
+    z-index: 21;
+    width: 337px;
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    -webkit-border-radius: 24px;
+    border-radius: 24px;
+    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+    -webkit-box-shadow: border-box;
+    box-sizing: border-box;
+    color: #363332;
+    font-size: 14px;
+    line-height: 20px;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -21px;
+      width: 0;
+      height: 0;
+      border-top: 21px solid #fff;
+      border-right: 30px solid transparent;
+    }
+  }
+
+  &:hover &-message {
+    display: block;
+  }
+}

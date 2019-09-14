@@ -71,7 +71,7 @@
 .filter.js-filter
     .filter__select.js-filter-select(data-filter='mark') Марка авто
     .filter__select.js-filter-select(data-filter='model') Модель авто
-    .filter__services
+    .filter__services.js-filter-select(data-filter='services')
         .filter__services-count 15
         .filter__services-text Масло в двигателе замена, Мас
         .filter__services-delete
@@ -117,4 +117,6 @@
                         label.radio=item
                             input.radio-input(type="checkbox")
                             span.radio-mark
+    .filter-content__item(data-filter-content='services')
+        include ../services-list/services-list
 

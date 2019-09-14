@@ -1,0 +1,129 @@
+mixin checkbox(name, title, needArrow=false, hint=false)
+    label.services-checkbox
+        input(type='checkbox' name=name)
+        span.services-checkbox-mark
+        .services-checkbox-name
+            span=title
+            if hint.length
+                .hint
+                    .hint-message !{hint}
+            if needArrow
+                .services-list__item-arrow.js-services-show
+
+
+.services-list.js-services
+    ul.services-list__main
+        li.services-list__item
+            .services-list__item-inner
+                img.services-list__item-img(src='img/icon/icon-car.svg')
+                .services-list__item-name
+                    span Диагностика автомобиля
+                    .services-list__item-arrow.js-services-show
+            ul.services-list__child
+                li.services-list__item
+                    .services-list__item-inner
+                        +checkbox('diagnostic', 'Диагностика эксплуатационных жидкостей', true)
+                    ul.services-list__child
+                        li.services-list__item
+                            .services-list__item-inner.services-list__item-price(data-price='490 р.')
+                                +checkbox('engine-oil', 'Масло в двигателе замена', false, 'test test test test test test')
+                        li.services-list__item
+                            .services-list__item-inner.services-list__item-price(data-price='490 р.')
+                                +checkbox('engine-oil', 'Масло в двигателе замена', false, '<b>test test</b> test test test test')
+                        li.services-list__item
+                            .services-list__item-inner.services-list__item-price(data-price='490 р.')
+                                +checkbox('engine-oil', 'Масло в двигателе замена')
+            ul.services-list__child
+                li.services-list__item
+                    .services-list__item-inner
+                        +checkbox('diagnostic', 'Диагностика эксплуатационных жидкостей', true)
+                    ul.services-list__child
+                        li.services-list__item
+                            .services-list__item-inner.services-list__item-price(data-price='490 р.')
+                                +checkbox('engine-oil', 'Масло в двигателе замена')
+                        li.services-list__item
+                            .services-list__item-inner.services-list__item-price(data-price='490 р.')
+                                +checkbox('engine-oil', 'Масло в двигателе замена')
+                        li.services-list__item
+                            .services-list__item-inner.services-list__item-price(data-price='490 р.')
+                                +checkbox('engine-oil', 'Масло в двигателе замена')
+
+            ul.services-list__child
+                li.services-list__item
+                    .services-list__item-inner
+                        +checkbox('diagnostic', 'Диагностика эксплуатационных жидкостей', true)
+                    ul.services-list__child
+                        li.services-list__item
+                            .services-list__item-inner.services-list__item-price(data-price='490 р.')
+                                +checkbox('engine-oil', 'Масло в двигателе замена')
+                        li.services-list__item
+                            .services-list__item-inner.services-list__item-price(data-price='490 р.')
+                                +checkbox('engine-oil', 'Масло в двигателе замена')
+                        li.services-list__item
+                            .services-list__item-inner.services-list__item-price(data-price='490 р.')
+                                +checkbox('engine-oil', 'Масло в двигателе замена')
+
+        li.services-list__item
+            .services-list__item-inner
+                img.services-list__item-img(src='img/icon/icon-shape.svg')
+                .services-list__item-name
+                    span Ремонт
+                    .services-list__item-arrow.js-services-show
+            ul.services-list__child
+                li.services-list__item
+                    .services-list__item-inner
+                        +checkbox('diagnostic', 'Диагностика эксплуатационных жидкостей', true)
+                    ul.services-list__child
+                        li.services-list__item
+                            .services-list__item-inner.services-list__item-price(data-price='490 р.')
+                                +checkbox('engine-oil', 'Масло в двигателе замена')
+                        li.services-list__item
+                            .services-list__item-inner.services-list__item-price(data-price='490 р.')
+                                +checkbox('engine-oil', 'Масло в двигателе замена')
+                        li.services-list__item
+                            .services-list__item-inner.services-list__item-price(data-price='490 р.')
+                                +checkbox('engine-oil', 'Масло в двигателе замена')
+
+        li.services-list__item
+            .services-list__item-inner
+                img.services-list__item-img(src='img/icon/icon-technical.svg')
+                .services-list__item-name
+                    span Техническое обслуживание
+                    .services-list__item-arrow.js-services-show
+            ul.services-list__child
+                li.services-list__item
+                    .services-list__item-inner
+                        +checkbox('diagnostic', 'Диагностика эксплуатационных жидкостей', true)
+                    ul.services-list__child
+                        li.services-list__item
+                            .services-list__item-inner.services-list__item-price(data-price='490 р.')
+                                +checkbox('engine-oil', 'Масло в двигателе замена')
+                        li.services-list__item
+                            .services-list__item-inner.services-list__item-price(data-price='490 р.')
+                                +checkbox('engine-oil', 'Масло в двигателе замена')
+                        li.services-list__item
+                            .services-list__item-inner.services-list__item-price(data-price='490 р.')
+                                +checkbox('engine-oil', 'Масло в двигателе замена')
+        li.services-list__item
+            .services-list__item-inner
+                img.services-list__item-img(src='img/icon/icon-fitting.svg')
+                .services-list__item-name
+                    span Шиномонтаж
+                    .services-list__item-arrow.js-services-show
+            ul.services-list__child
+                li.services-list__item
+                    .services-list__item-inner
+                        +checkbox('diagnostic', 'Диагностика эксплуатационных жидкостей', true)
+                    ul.services-list__child
+                        li.services-list__item
+                            .services-list__item-inner.services-list__item-price(data-price='490 р.')
+                                +checkbox('engine-oil', 'Масло в двигателе замена')
+                        li.services-list__item
+                            .services-list__item-inner.services-list__item-price(data-price='490 р.')
+                                +checkbox('engine-oil', 'Масло в двигателе замена')
+                        li.services-list__item
+                            .services-list__item-inner.services-list__item-price(data-price='490 р.')
+                                +checkbox('engine-oil', 'Масло в двигателе замена')
+
+
+
