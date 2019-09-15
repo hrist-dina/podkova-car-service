@@ -1,0 +1,34 @@
+.station-time
+    .station-time__inner
+        .station-time__form
+            form(action='' method='POST')
+                .station-time__form-row
+                    .station-time__form-full
+                        label.station-time__select-label
+                            .station-time__half
+                                span Адрес станции
+                                a(href='javascript:void(0)').station-time__nearest Выбрать ближайшую
+                            .station-time__select-wrap
+                                select.station-time__select(name='address')
+                                    option(value="" disabled selected) Список станций
+                                    option(value="vlasihinskay") Власихинская
+                                    option(value="popova") Попова
+                .station-time__form-row
+                    .station-time__form-date
+                        label.station-time__select-label
+                            span Дата записи
+                            .station-time__select-wrap
+                                select.station-time__select(name='date')
+                                    option(value="12.08.19") Сегодня 12.08.19
+                                    option(value="13.08.19") 13.08.19
+                                    option(value="14.08.19") 14.08.19
+                    .station-time__form-time
+                        label.station-time__select-label
+                            span Время
+                            .station-time__select-wrap
+                                select.station-time__select(name='time')
+                                    option(value="8:00") 8:00
+                                    option(value="9:00") 9:00
+                                    option(value="10:00") 10:00
+                button.btn.station-time__btn(type='submit') Подтвердить запись
+        .station-time__map#map-station-time

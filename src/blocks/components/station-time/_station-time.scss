@@ -1,0 +1,121 @@
+.station-time {
+  margin-top: 40px;
+
+  &__inner {
+    @include row-flex();
+  }
+
+  &__form {
+    @include col();
+    @include size(5);
+
+    &-row {
+      @include row-flex();
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &-full {
+      @include col();
+      @include u-size(5, 5, $offset)
+    }
+
+    &-date {
+      @include col();
+      @include u-size(3, 5, $offset)
+    }
+
+    &-time {
+      @include col();
+      @include u-size(2, 5, $offset)
+    }
+  }
+
+  &__map {
+    @include col();
+    @include size(7);
+    background: #fdfaf2;
+    min-height: 316px;
+  }
+
+  &__select {
+    background: transparent;
+    height: 64px;
+    border: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+
+    &::-ms-expand {
+      display: none;
+    }
+
+        &-wrap {
+          border: 2px solid #E6E6E6;
+          box-sizing: border-box;
+          border-radius: 4px;
+          overflow: hidden;  /* всё, что выходит за границу не показываем */
+      height: 64px;
+      background: url(icon-select-arrow()) #fff no-repeat #{calc(100% - 16px)} center;
+      width: 100%;
+    }
+
+    &-label {
+      display: block;
+      width: 100%;
+
+      & > span {
+        display: inline-block;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+        color: #333333;
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+  }
+
+  &__half {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+
+  &__nearest {
+    position: relative;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: #1C98FF;
+    padding-left: 20px;
+    text-decoration: none;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      background: url(icon-navigation()) no-repeat center;
+    }
+  }
+}

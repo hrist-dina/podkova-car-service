@@ -4,18 +4,20 @@ section.record
             h1.h1.record__h1
                 |Запись на обслуживание автомобиля
             ul.tab
-                li.tab__item.active
+                li.tab__item.js-record-tab.active(data-tab='auto')
                     a.tab__link(href="#")
-                        |Выбор автомобиля и услуги
-                li.tab__item
+                        | Выбор автомобиля и услуги
+                li.tab__item.js-record-tab(data-tab='station-time')
                     a.tab__link(href="#")
-                        |Станция и время
-                li.tab__item
+                        | Станция и время
+                li.tab__item.js-record-tab(data-tab='confirmation')
                     a.tab__link(href="#")
-                        |Подтверждение
+                        | Подтверждение
             .tab-content__list
-                .tab-content__item
+                .tab-content__item.active.js-record-tab-content(data-tab-content='auto')
                    include ../filter/filter
+                .tab-content__item.js-record-tab-content(data-tab-content='station-time')
+                   include ../station-time/station-time
 
 
 
