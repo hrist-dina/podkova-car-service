@@ -1,0 +1,65 @@
+header {
+
+  & > div {
+    max-width: 960px;
+    width: 100%;
+    position: relative;
+
+    @include from(641px) {
+      height: 120px;
+    }
+
+    @include to(1023px) {
+     @include container();
+    }
+  }
+
+  & .logo {
+    @include to(1023px) {
+      left: auto;
+      margin-left: 0;
+    }
+
+    @include from(641px) {
+      top: 32px;
+    }
+  }
+
+  & .phone {
+    @include from(641px) {
+      top: 41px;
+      left: auto;
+      right: 220px;
+      margin: auto;
+    }
+  }
+
+  &:before {
+    top: 8px;
+    border-top-width: 97px;
+    @include to(1023px) {
+      right: 0;
+      margin-right: auto;
+    }
+    @include to(640px) {
+      display: none;
+    }
+  }
+
+  & .lk {
+    top: 47px;
+    @include to(1023px) {
+      display: inline-block;
+      position: absolute;
+      right: 35px;
+      left: auto;
+      margin: auto;
+    }
+  }
+
+  & .menu-open {
+    @include to(640px) {
+      right: 16px;
+    }
+  }
+}

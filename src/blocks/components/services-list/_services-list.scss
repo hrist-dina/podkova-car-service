@@ -7,8 +7,11 @@
   }
 
   &__child {
-    margin-left: 48px;
     display: none;
+    margin-left: 15px;
+    @include sm-block {
+      margin-left: 48px;
+    }
   }
   &__child &__item {
     font-weight: normal;
@@ -24,10 +27,12 @@
     &-inner {
       display: flex;
       align-items: center;
-      padding-left: 16px;
       justify-content: space-between;
       width: 100%;
       box-sizing: border-box;
+      @include sm-block {
+        padding-left: 16px;
+      }
     }
 
     &-arrow {
@@ -59,6 +64,14 @@
       & > span {
         padding: 20px 16px 20px 8px;
         cursor: pointer;
+        box-sizing: border-box;
+
+        @include to($break_sm) {
+          padding: 16px 8px;
+          width: 60%;
+          font-size: 14px;
+          line-height: 18px;
+        }
       }
     }
 

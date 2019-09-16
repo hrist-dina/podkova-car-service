@@ -1,0 +1,37 @@
+.confirmation
+    .confirmation__inner
+        .selected
+            .selected__title
+                |Выбранные услуги
+            .selected___list
+                - var n = 0
+                - var price = 490
+                while n < 5
+                    .selected__item
+                        .selected__text
+                            span Масло в двигателе замена
+                            .hint
+                                .hint-message Масло в двигателе замена
+                        .selected__price
+                            span #{price} р.
+                            a(href='javascript:void(0)').selected__delete
+                    - n++;
+            .selected__total #{price * n} р.
+
+        .address
+            .address__inner
+                .address__text
+                    | Будем ожидать Вас по адресу
+                .address__info
+                    | ул. Попова 150 в 18:00 28.08.19
+    .confirmation__inner-small
+        .confirmation__title
+            | Подтверждение записи
+        .confirmation-form
+            label.confirmation-form__label
+                input.confirmation-form__input(type="text" placeholder="Фамилия и Имя")
+            label.confirmation-form__label
+                input.confirmation-form__input(type="text" placeholder="Номер телефона")
+            button.confirmation__button Подтвердить запись
+            .confirmation__agree
+                +checkbox('agree', 'Нажимая на кнопку вы соглашаетесь с политикой обработки персональных данных', false)

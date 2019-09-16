@@ -47,6 +47,10 @@ const webpackConfig = require("./webpack.config.js"),
       dist: "./dist/styles/",
       watch: ["./src/blocks/**/*.scss", "./src/styles/**/*.scss"]
     },
+    localCopy: {
+      src: "./src/local/**/**",
+      dist: "./dist/local/",
+    },
     scripts: {
       src: "./src/js/index.js",
       dist: "./dist/js/",
@@ -227,6 +231,15 @@ export const styles = () =>
       })
     )
     .pipe(browsersync.stream());
+export const localCopy = () =>
+    gulp
+        .src(paths.localCopy.src)
+        .pipe(gulp.dest(paths.localCopy.dist))
+        .pipe(
+            debug({
+                title: "Local copy"
+            })
+        );
 
 export const scripts = () =>
   gulp
@@ -358,7 +371,7 @@ export const favs = () =>
 export const development = gulp.series(
   cleanFiles,
   smartGrid,
-  gulp.parallel(views, styles, scripts, svgsprites, images, fonts, favs),
+  gulp.parallel(views, styles, localCopy, scripts, svgsprites, images, fonts, favs),
   gulp.parallel(server)
 );
 
@@ -368,6 +381,7 @@ export const prod = gulp.series(
   serverConfig,
   views,
   styles,
+    localCopy,
   scripts,
   svgsprites,
   images,

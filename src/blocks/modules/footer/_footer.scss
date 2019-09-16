@@ -1,0 +1,103 @@
+footer {
+  margin-top: 100px;
+  height: 335px;
+  background-image: url("../img/service-footer-bg.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+
+  @include to(640px) {
+    padding: 20px 0;
+    height: auto !important;
+    margin: 30px auto auto !important;
+  }
+
+  & .container {
+    max-width: 960px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  &:before {
+    content: none;
+  }
+
+  & .nav {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    top: auto;
+    height: 100%;
+    @include col();
+    @include size(6);
+
+    @include to(640px) {
+      @include size(12);
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    & h5 {
+      @include to(640px) {
+        margin-bottom: 12px;
+      }
+    }
+
+    &__wrap {
+      @include row-flex();
+      padding: 32px 0 48px;
+      max-height: 228px;
+      box-sizing: border-box;
+
+      @include to(640px) {
+        max-height: 100%;
+        padding: 16px 0 32px;
+      }
+    }
+
+    &:after {
+      content: none;
+    }
+
+    &:first-child {
+      @include size(5);
+      @include to(640px) {
+        @include size(12);
+      }
+    }
+
+    &:nth-child(n + 2) {
+      & ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-height: 90px;
+        @include to(640px) {
+          max-height: 100%;
+        }
+      }
+    }
+  }
+
+  & .copy {
+    @include to(640px) {
+      position: inherit;
+      bottom: auto;
+      margin-bottom: 16px;
+    }
+  }
+  & .social {
+    @include to(640px) {
+      position: inherit;
+      bottom: auto;
+      margin-bottom: 16px;
+    }
+  }
+
+  & .author {
+    @include to(640px) {
+      position: inherit;
+      bottom: auto;
+    }
+  }
+}

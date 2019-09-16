@@ -1,0 +1,27 @@
+nav>ul>li:first-child>a {
+  background-image: none;
+  padding-left: 26px;
+}
+
+nav>ul {
+  max-width: 844px;
+  width: 100%;
+
+  @include from(641px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & > li > a {
+    padding: 26px;
+
+    @include to(1023px) {
+      font-size: 13px;
+      line-height: 16px;
+    }
+    @include to(800px) {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+}

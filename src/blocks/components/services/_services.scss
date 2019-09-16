@@ -4,15 +4,17 @@
 
   &__title {
     font-weight: bold;
-    font-size: 36px;
-    line-height: 42px;
     color: #333333;
     width: 100%;
+    font-size: 28px;
+    line-height: 32px;
 
     @include sm-block {
       width: 80%;
       display: inline-block;
       vertical-align: middle;
+      font-size: 36px;
+      line-height: 42px;
     }
   }
 

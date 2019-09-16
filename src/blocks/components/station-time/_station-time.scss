@@ -7,7 +7,13 @@
 
   &__form {
     @include col();
-    @include size(5);
+    @include size-lg(5);
+    @include size(12);
+    margin-bottom: 32px;
+
+    @include lg-block {
+      margin-bottom: 0;
+    }
 
     &-row {
       @include row-flex();
@@ -25,18 +31,27 @@
 
     &-date {
       @include col();
-      @include u-size(3, 5, $offset)
+      @include u-size(3, 5, $offset);
+
+      @include to(360px) {
+        @include u-size(5, 5, $offset);
+        margin-bottom: 24px;
+      }
     }
 
     &-time {
       @include col();
-      @include u-size(2, 5, $offset)
+      @include u-size(2, 5, $offset);
+      @include to(360px) {
+        @include u-size(5, 5, $offset);
+      }
     }
   }
 
   &__map {
     @include col();
-    @include size(7);
+    @include size-lg(7);
+    @include size(12);
     background: #fdfaf2;
     min-height: 316px;
   }
@@ -55,19 +70,24 @@
     appearance: none;
     outline: none;
     cursor: pointer;
+    text-indent: 5px;
 
     &::-ms-expand {
       display: none;
     }
 
-        &-wrap {
-          border: 2px solid #E6E6E6;
-          box-sizing: border-box;
-          border-radius: 4px;
-          overflow: hidden;  /* всё, что выходит за границу не показываем */
+    &-wrap {
+      border: 2px solid #E6E6E6;
+      box-sizing: border-box;
+      border-radius: 4px;
+      overflow: hidden;
       height: 64px;
       background: url(icon-select-arrow()) #fff no-repeat #{calc(100% - 16px)} center;
       width: 100%;
+
+      &:active {
+        border-color: #FBDB44;
+      }
     }
 
     &-label {

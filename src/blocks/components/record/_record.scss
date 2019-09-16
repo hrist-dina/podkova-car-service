@@ -12,11 +12,15 @@
     line-height: 42px;
     color: #333333;
     margin-bottom: 32px;
+
+    @include to(640px) {
+      font-size: 28px;
+      line-height: 32px;
+    }
   }
 }
 
 .tab {
-  background: linear-gradient(180deg, #414141 0%, #333333 100%);
   font-size: 0;
   border-radius: 6px;
 
@@ -27,38 +31,51 @@
     list-style-type: none;
     padding: 24px;
     text-align: center;
-    width: 33.33%;
+    width: 100%;
     box-sizing: border-box;
+    cursor: pointer;
+    background: linear-gradient(180deg, #414141 0%, #333333 100%);
 
-    &:after {
-      content: '/';
-      position: absolute;
-      font-size: 20px;
-      line-height: 24px;
-      height: 24px;
-      text-align: center;
-      color: #fff;
-      right: -6px;
-      bottom: 0;
-      top: 0;
-      left: auto;
-      margin: auto;
+    @include from($break_lg) {
+      width: 33.33%;
+      &:before {
+        content: '/';
+        position: absolute;
+        font-size: 20px;
+        line-height: 24px;
+        height: 24px;
+        text-align: center;
+        color: #fff;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        right: auto;
+        margin: auto;
+        z-index: 1;
+      }
+
+      &:first-child {
+        border-radius: 4px 0 0 4px;
+        &:before {
+          content: none;
+        }
+      }
+
+      &:last-child {
+        border-radius:  0 4px 4px 0;
+      }
     }
 
-    &:first-child {
-      border-radius: 4px 0 0 4px;
-    }
 
-    &:last-child {
-      border-radius:  0 4px 4px 0;
-      &:after {
+    &.active {
+      background: #fff160;
+      &:before {
         content: none;
       }
     }
 
-    &.active {
-      background: #fff160;
-      &:after {
+    &.active + & {
+      &:before {
         content: none;
       }
     }
