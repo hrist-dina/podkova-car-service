@@ -38,6 +38,10 @@ header {
   & .logo-m {
     @include to(640px) {
       top: 0;
+
+      &:before {
+        background-image: url(../local/templates/podkova/logo.png);
+      }
     }
   }
 
