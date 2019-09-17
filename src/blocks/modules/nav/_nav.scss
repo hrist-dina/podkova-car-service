@@ -3,8 +3,21 @@ nav>ul>li:first-child>a {
   padding-left: 26px;
 }
 
+nav.fixed {
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+nav>ul>li:first-child {
+  margin-left: 0;
+}
+
+nav.fixed>ul>li:first-child {
+  margin-left: 0;
+}
+
 nav>ul {
-  max-width: 844px;
+  max-width: 890px;
   width: 100%;
 
   @include from(641px) {

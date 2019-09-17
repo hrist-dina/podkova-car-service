@@ -12,6 +12,16 @@ header {
     @include to(1023px) {
      @include container();
     }
+    @include to(640px) {
+      &:before {
+        top: 0;
+      }
+
+      height: 165px;
+
+    }
+
+
   }
 
   & .logo {
@@ -25,12 +35,24 @@ header {
     }
   }
 
+  & .logo-m {
+    @include to(640px) {
+      top: 0;
+    }
+  }
+
   & .phone {
     @include from(641px) {
       top: 41px;
       left: auto;
       right: 220px;
       margin: auto;
+    }
+  }
+
+  & .call {
+    @include to(640px) {
+      top: 117px;
     }
   }
 
@@ -55,11 +77,16 @@ header {
       left: auto;
       margin: auto;
     }
+
+    @include to(640px) {
+      top: 0;
+    }
   }
 
   & .menu-open {
     @include to(640px) {
       right: 16px;
+      top: 90px
     }
   }
 }
