@@ -29,9 +29,9 @@
             | Подтверждение записи
         .confirmation-form
             label.confirmation-form__label
-                input.confirmation-form__input(type="text" placeholder="Фамилия и Имя")
+                input.confirmation-form__input(type="text" placeholder="Фамилия и Имя" name='name')
             label.confirmation-form__label
-                input.confirmation-form__input(type="text" placeholder="Номер телефона")
+                input.confirmation-form__input.js-mask-phone(type="text" placeholder="Номер телефона" name='PERSONAL_MOBILE')
             button.confirmation__button Подтвердить запись
             .confirmation__agree
                 +checkbox('agree', 'Нажимая на кнопку вы соглашаетесь с политикой обработки персональных данных', false)
