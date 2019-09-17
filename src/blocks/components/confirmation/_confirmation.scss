@@ -160,6 +160,10 @@
     border: none;
     padding: 20px 32px;
     cursor: pointer;
+
+    &:active {
+      padding: 20px 32px;
+    }
   }
 
   &__agree {

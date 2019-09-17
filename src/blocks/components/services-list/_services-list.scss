@@ -111,6 +111,48 @@
     border: 2px solid transparent;
   }
 
+  & .checker {
+    display: block !important;
+    width: 20px;
+    height: 20px;
+
+    & > span {
+      background: none;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: #EAF8FB;
+      border-radius: 2px;
+      box-sizing: border-box;
+      border: 2px solid transparent;
+      @include transition(.3s, ease);
+      cursor: pointer;
+
+      &.checked {
+        background: #1C98FF url(icon-checkbox()) no-repeat center;
+        background-size: contain;
+        transition: none;
+        border: 2px solid transparent;
+      }
+    }
+
+    &  input {
+      width: auto;
+      height: auto;
+      display: none;
+    }
+  }
+
+  &:hover .checker > span:not(.checked) {
+    border: 2px solid #1C98FF;
+    background-color: transparent;
+    @include transition(.3s, ease);
+  }
+
+  & .checker ~ &-mark {
+    display: none;
+  }
+
   &-mark {
     display: inline-block;
     width: 20px;
@@ -161,6 +203,12 @@
     font-size: 14px;
     line-height: 20px;
 
+    @include to($break_sm) {
+      width: 300px;
+      left: -200px;
+      padding: 15px;
+    }
+
     &:after {
       content: '';
       position: absolute;
@@ -170,6 +218,11 @@
       height: 0;
       border-top: 21px solid #fff;
       border-right: 30px solid transparent;
+
+
+      @include to($break_sm) {
+        left: 72%;
+      }
     }
   }
 
